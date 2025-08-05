@@ -1,0 +1,108 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.container-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+  gap: 2%;
+}
+
+/* CAMISAS MASCULINAS */
+
+.card-img-topc {
+  height: 30vh;
+  background: url("../img/camisacinza.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-img-topm {
+  height: 30vh;
+  background: url("../img/camisamarrom.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-img-topv {
+  height: 30vh;
+  background: url("../img/camisaverde.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*SHORTS MASCULINOS*/
+
+.card-img-topsa {
+  height: 30vh;
+  background: url("../img/shortazul.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card-img-topsf {
+  height: 30vh;
+  background: url("../img/shortflor.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card-img-topsp {
+  height: 30vh;
+  background: url("../img/shortpraia.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* TENIS */
+
+.card-img-topTB{
+  height: 30vh;
+  background: url("../img/tenisbranco.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card-img-topTc{
+  height: 30vh;
+  background: url("../img/teniscinza.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card-img-topTv{
+  height: 30vh;
+  background: url("../img/tenisverde.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
