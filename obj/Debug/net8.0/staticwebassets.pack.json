@@ -13,6 +13,42 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\TCC\\wwwroot\\img\\camisacinza.webp",
+      "PackagePath": "staticwebassets\\img\\camisacinza.webp"
+    },
+    {
+      "Id": "C:\\TCC\\wwwroot\\img\\camisamarrom.webp",
+      "PackagePath": "staticwebassets\\img\\camisamarrom.webp"
+    },
+    {
+      "Id": "C:\\TCC\\wwwroot\\img\\camisaverde.webp",
+      "PackagePath": "staticwebassets\\img\\camisaverde.webp"
+    },
+    {
+      "Id": "C:\\TCC\\wwwroot\\img\\shortazul.webp",
+      "PackagePath": "staticwebassets\\img\\shortazul.webp"
+    },
+    {
+      "Id": "C:\\TCC\\wwwroot\\img\\shortflor.webp",
+      "PackagePath": "staticwebassets\\img\\shortflor.webp"
+    },
+    {
+      "Id": "C:\\TCC\\wwwroot\\img\\shortpraia.webp",
+      "PackagePath": "staticwebassets\\img\\shortpraia.webp"
+    },
+    {
+      "Id": "C:\\TCC\\wwwroot\\img\\tenisbranco.webp",
+      "PackagePath": "staticwebassets\\img\\tenisbranco.webp"
+    },
+    {
+      "Id": "C:\\TCC\\wwwroot\\img\\teniscinza.webp",
+      "PackagePath": "staticwebassets\\img\\teniscinza.webp"
+    },
+    {
+      "Id": "C:\\TCC\\wwwroot\\img\\tenisverde.webp",
+      "PackagePath": "staticwebassets\\img\\tenisverde.webp"
+    },
+    {
       "Id": "C:\\TCC\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

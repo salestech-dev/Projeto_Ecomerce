@@ -28,3 +28,4 @@ C:\TCC\obj\Debug\net8.0\refint\TCC.dll
 C:\TCC\obj\Debug\net8.0\TCC.pdb
 C:\TCC\obj\Debug\net8.0\TCC.genruntimeconfig.cache
 C:\TCC\obj\Debug\net8.0\ref\TCC.dll
+C:\TCC\obj\Debug\net8.0\TCC.sourcelink.json

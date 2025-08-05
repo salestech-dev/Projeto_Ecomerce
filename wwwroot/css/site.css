@@ -22,15 +22,37 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+  background-color: #f4f7ff;
+  /* Azul bem claro, tirando o branco morto */
+  color: #222;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* margin-bottom: 60px; */
 }
 
 .container-flex {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5rem;
   gap: 2%;
+}
+
+.text-center {
+  display: flex;
+  justify-content: center;
+}
+
+.colunm-drop{
+  display: flex;
+  text-align: center;
+  
+}
+
+
+.container-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* CAMISAS MASCULINAS */
@@ -68,6 +90,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .card-img-topsf {
   height: 30vh;
   background: url("../img/shortflor.webp");
@@ -75,6 +98,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .card-img-topsp {
   height: 30vh;
   background: url("../img/shortpraia.webp");
@@ -85,24 +109,162 @@ body {
 
 /* TENIS */
 
-.card-img-topTB{
+.card-img-topTB {
   height: 30vh;
   background: url("../img/tenisbranco.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.card-img-topTc{
+
+.card-img-topTc {
   height: 30vh;
   background: url("../img/teniscinza.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.card-img-topTv{
+
+.card-img-topTv {
   height: 30vh;
   background: url("../img/tenisverde.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+
+
+
+
+
+/* CARDS SUAVE NO MODO DARK  */
+/* CARDS EM MODO PADRÃO */
+.card {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  margin: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* BOTÕES */
+.card .btn-primary {
+  background-color: #0d6efd;
+  border: none;
+}
+
+.card .btn-primary:hover {
+  background-color: #084298;
+}
+
+/* CONTAINER FLEX AJUSTADO */
+.container-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* DARK MODE NOS CARDS */
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  border-color: #333;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .card .btn-primary {
+  background-color: #66b2ff;
+  color: #000;
+}
+
+body.dark-mode .card .btn-primary:hover {
+  background-color: #3399ff;
+}
+
+/* TÍTULOS NO DARK MODE */
+body.dark-mode .card-title {
+  color: #ffffff;
+}
+
+/* TEXTOS NO DARK MODE */
+body.dark-mode .card-text {
+  color: #dddddd;
+}
+
+
+
+
+
+
+
+
+
+/* HEADER MELHORADO */
+/* HEADER ESTILIZADO */
+.navbar {
+  padding: 1rem 2rem;
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: #0d6efd !important;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.3s;
+  color: #333 !important;
+}
+
+.nav-link:hover {
+  color: #0d6efd !important;
+}
+
+/* BOTÃO DARK MODE */
+#toggle-theme {
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #333;
+  margin-left: 1rem;
+}
+
+#toggle-theme:hover {
+  color: #0d6efd;
+}
+
+/* MODO ESCURO */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .navbar {
+  background-color: #1e1e1e !important;
+}
+
+body.dark-mode .navbar-brand,
+body.dark-mode .nav-link,
+body.dark-mode #toggle-theme {
+  color: #f1f1f1 !important;
+}
+
+body.dark-mode .nav-link:hover,
+body.dark-mode #toggle-theme:hover {
+  color: #66b2ff !important;
+}
+
+header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 1rem 2rem;
 }

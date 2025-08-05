@@ -8,37 +8,124 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TCC.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        .layout {
+            display: flex;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .sidebar {
+            width: 240px;
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #0d6efd;
+        }
+
+        .filter-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .filter-group strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .filter-group label {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        body.dark-mode .sidebar {
+            background-color: #1e1e1e;
+            color: #f1f1f1;
+            border: 1px solid #333;
+        }
+
+        body.dark-mode .filter-group strong,
+        body.dark-mode .filter-group label {
+            color: #f1f1f1;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom shadow-sm mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">e-Commerce</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand fw-bold text-primary" asp-area="" asp-controller="Home" asp-action="Index">e-Commerce</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Catalogo</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Catálogo</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Perfil</a>
                         </li>
-
                     </ul>
+                    <button id="toggle-theme" title="Alternar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
+
+    <div class="layout">
+        <aside class="sidebar">
+            <h3>Filtros</h3>
+            <div class="filter-group">
+                <strong>Categoria</strong>
+                <label><input type="checkbox"> Camisas</label>
+                <label><input type="checkbox"> Shorts</label>
+                <label><input type="checkbox"> Tênis</label>
+            </div>
+            <div class="filter-group">
+                <strong>Tamanho</strong>
+                <label><input type="checkbox"> P</label>
+                <label><input type="checkbox"> M</label>
+                <label><input type="checkbox"> G</label>
+                <label><input type="checkbox"> GG</label>
+            </div>
+            <div class="filter-group">
+                <strong>Cor</strong>
+                <label><input type="checkbox"> Preto</label>
+                <label><input type="checkbox"> Branco</label>
+                <label><input type="checkbox"> Verde</label>
+            </div>
+            <div class="filter-group">
+                <strong>Preço</strong>
+                <label><input type="radio" name="preco"> Até R$50</label>
+                <label><input type="radio" name="preco"> R$50–100</label>
+                <label><input type="radio" name="preco"> Acima de R$100</label>
+            </div>
+        </aside>
+        <main class="main-content">
+            <div class="container1">
+                <main role="main">
+                    @RenderBody()
+                </main>
+            </div>
         </main>
     </div>
 
@@ -47,9 +134,19 @@
             &copy; 2025 - TCC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        const toggleButton = document.getElementById('toggle-theme');
+        const icon = toggleButton.querySelector('i');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+        });
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 
